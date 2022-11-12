@@ -88,14 +88,6 @@ ul {
 }
 
 /* .nav-list-item, */
-.contacts-item {
-	padding: 32px 0;
-}
-
-.contacts-list-top {
-	margin-left: auto;
-}
-
 .nav-list-item:nth-child(n + 2) {
 	margin-left: 50px;
 }
@@ -145,33 +137,35 @@ ul {
 	background-color: var(--main-blue);
 	bottom: 0;
 }
+.contacts-item {
+}
+
+.contacts-list-top {
+	margin-left: auto;
+}
 .contacts-item:nth-child(2) {
 	margin-left: 50px;
 }
 
 .contacts {
-	line-height: 16px;
-	color: var(--main-grey);
 	font-weight: var(--font-weight-regular);
 	line-height: 1.145;
 	letter-spacing: 0.02em;
 	justify-content: center;
 	align-items: center;
-	transition: fill var(--common-anim-time) var(--common-cubic-bezier),
-		color var(--common-anim-time) var(--common-cubic-bezier);
+	padding: 32px 0;
+	color: var(--main-grey);
+	transition: color var(--common-anim-time) var(--common-cubic-bezier);
 }
 
 .contacts-icon {
-	fill: var(--main-grey);
 	margin-right: 10px;
 	fill: currentColor;
 }
 
 .contacts:hover,
 .contacts:focus {
-	color: var(--main-grey);
 	color: var(--main-blue);
-	fill: var(--main-blue);
 }
 
 /* Герой */
@@ -268,6 +262,27 @@ ul {
 .job-demo:nth-child(n + 2) {
 	margin-left: 30px;
 }
+.job-demo {
+	position: relative;
+}
+
+.job-demo-wrap {
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 27px;
+	padding-top: 27px;
+	width: 100%;
+	font-size: 14px;
+	line-height: 1.14;
+	background-color: rgba(47, 48, 58, 0.8);
+}
+
+.job-demo-label {
+	font-weight: 700;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+}
 
 .section-tittle {
 	font-size: 36px;
@@ -328,13 +343,11 @@ ul {
 	border-radius: 50%;
 	fill: rgba(175, 177, 184, 1);
 	transition: background-color var(--common-anim-time)
-			var(--common-cubic-bezier),
-		fill var(--common-anim-time) var(--common-cubic-bezier);
+		var(--common-cubic-bezier);
 }
 
 .social-link:hover,
 .social-link:focus {
-	fill: var(--main-white);
 	background-color: var(--main-blue);
 }
 
@@ -366,7 +379,6 @@ ul {
 .clients-link:focus {
 	fill: var(--main-blue);
 	border: 1px solid var(--main-blue);
-	cursor: pointer;
 }
 
 /* Футер */
@@ -460,6 +472,7 @@ ul {
 	transition: color var(--common-anim-time) var(--common-cubic-bezier),
 		background var(--common-anim-time) var(--common-cubic-bezier),
 		box-shadow var(--common-anim-time) var(--common-cubic-bezier);
+	cursor: pointer;
 }
 
 .filters-btn:hover,
@@ -468,7 +481,6 @@ ul {
 	background: var(--main-blue);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
 		0px 2px 2px rgba(0, 0, 0, 0.12);
-	cursor: pointer;
 }
 
 /* Проєкти */
@@ -553,11 +565,13 @@ ul {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.2);
+	transition: opacity var(--common-anim-time) var(--common-cubic-bezier);
+	visibility: var(--common-anim-time) var(--common-cubic-bezier);
 }
 .backdrop.is-hidden {
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity var(--common-anim-time) var(--common-cubic-bezier);
+	visibility: hidden;
 }
 .modal {
 	position: absolute;
@@ -587,26 +601,4 @@ ul {
 }
 .modal-close-icon {
 	fill: #000000;
-}
-/* Обертка Чім ми займаємося */
-.job-demo {
-	position: relative;
-}
-.job-demo-wrap {
-	position: absolute;
-	bottom: 0;
-	padding-bottom: 27px;
-	padding-top: 27px;
-	/* display: flex; */
-	width: 100%;
-	font-style: 700;
-	font-size: 14px;
-	line-height: 1.14;
-	background-color: rgba(47, 48, 58, 0.8);
-}
-
-.job-demo-label {
-	text-align: center;
-	color: #ffffff;
-	text-transform: uppercase;
 }
